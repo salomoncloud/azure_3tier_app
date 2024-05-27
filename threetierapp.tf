@@ -132,8 +132,8 @@ resource "azurerm_linux_virtual_machine" "web_vm" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_B1s"
-  admin_username      = var.administrator_login
-  admin_password      = var.administrator_login_password
+  admin_username      = var.admin_username
+  admin_password      = var.admin_password
   network_interface_ids = [
     azurerm_network_interface.web_nic.id,
   ]
@@ -166,8 +166,8 @@ resource "azurerm_linux_virtual_machine" "app_vm" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_B1s"
-  admin_username      = var.administrator_login
-  admin_password      = var.administrator_login_password
+  admin_username      = var.admin_username
+  admin_password      = var.admin_password
   network_interface_ids = [
     azurerm_network_interface.app_nic.id,
   ]
@@ -199,8 +199,8 @@ resource "azurerm_mysql_server" "mysql" {
   name                = "mysqlserver"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  administrator_login = var.db_admin_username
-  administrator_login_password = var.db_admin_password
+  administrator_login = var.admin_username
+  administrator_login_password = var.admin_password
   sku_name            = "GP_Gen5_2"
   storage_mb          = 5120
   version             = "5.7"
