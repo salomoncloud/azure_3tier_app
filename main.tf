@@ -125,8 +125,3 @@ resource "azurerm_subnet_network_security_group_association" "db_assoc" {
   subnet_id                 = azurerm_subnet.db.id
   network_security_group_id = azurerm_network_security_group.db_nsg.id
 }
-
-# Output the Public IP of the Web VM
-output "web_vm_public_ip" {
-  value = azurerm_linux_virtual_machine.web_vm.public_ip_address
-}
