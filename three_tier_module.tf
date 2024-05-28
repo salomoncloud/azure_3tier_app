@@ -10,6 +10,7 @@ module "three_tier_app" {
   client_id           = var.client_id
   client_secret       = var.client_secret
   tenant_id           = var.tenant_id
+  module_web_vm_public_ip = 
 }
 
 output "module_web_vm_public_ip" {
