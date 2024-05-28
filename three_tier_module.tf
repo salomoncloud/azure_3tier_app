@@ -4,8 +4,8 @@ module "three_tier_app" {
   location            = var.location
   admin_username      = var.admin_username
   admin_password      = var.admin_password
-  db_admin_username   = var.admin_username_db
-  db_admin_password   = var.admin_password_db
+  admin_username_db  = var.admin_username_db
+  admin_password_db   = var.admin_password_db
 }
 
 output "module_web_vm_public_ip" {
