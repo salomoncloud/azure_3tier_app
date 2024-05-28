@@ -1,5 +1,5 @@
 module "three_tier_app" {
-  source              = "./modulethreetierwebapp/"
+  source              = "./threetierwebapp/"
   resource_group_name = var.resource_group_name
   location            = var.location
   admin_username      = var.admin_username
