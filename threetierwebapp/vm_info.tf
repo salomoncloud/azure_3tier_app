@@ -34,7 +34,8 @@ resource "azurerm_network_interface" "web_nic" {
 
 # App Tier Virtual Machine
 resource "azurerm_linux_virtual_machine" "app_vm" {
-  name                = var.app_vm_name
+  count               = var.vm_count
+  name                = "appVM-${count.index}"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = var.app_vm_size
