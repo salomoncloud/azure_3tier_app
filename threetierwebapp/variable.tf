@@ -2,6 +2,10 @@ variable "subscription_id" {
   type = string
 }
 
+variable "vm_count" {
+type = number
+}
+
 variable "client_id" {
   type = string
 }
