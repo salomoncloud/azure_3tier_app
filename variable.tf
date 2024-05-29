@@ -2,11 +2,6 @@ variable "subscription_id" {
   type = string
 }
 
-variable "vm_count" {
-type = number
-default = 7
-}
-
 variable "client_id" {
   type = string
 }
