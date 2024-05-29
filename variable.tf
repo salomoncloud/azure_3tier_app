@@ -4,6 +4,7 @@ variable "subscription_id" {
 
 variable "vm_count" {
 type = number
+default = 7
 }
 
 variable "client_id" {
